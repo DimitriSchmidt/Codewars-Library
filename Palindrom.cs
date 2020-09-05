@@ -7,7 +7,6 @@ namespace Palindrom
     {
         static void Main(string[] args)
         {
-       
             string s = "hannahx";
             Debug.Print(s);
             solve(s);
