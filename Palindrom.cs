@@ -1,17 +1,13 @@
 ﻿
 using System.Diagnostics;
 
-
 namespace Palindrom
 {
     class Program
     {
-        public static int count { get; set; } = 0;
-
         static void Main(string[] args)
         {
-            
-
+       
             string s = "hannahx";
             Debug.Print(s);
             solve(s);
@@ -20,11 +16,8 @@ namespace Palindrom
 
         public static string solve(string s)
         {
-           
-
             for (int i = 0; i < s.Length / 2; i++)
             {
-
                 if (s[i] == s[s.Length - (i + 1)])
                 {
                     //good news
@@ -35,35 +28,24 @@ namespace Palindrom
                  Debug.Print (Check(s));
                  return Check(s);
                 }
-          
             }
-
             Debug.Print("OK");
             return "OK";
         }
 
         public static string Check(string s)
         {
-            string copy = s;
-
-
-            for (int i = 0; i < s.Length; i++)
+         string copy = s;
+         for (int i = 0; i < s.Length; i++)
+         {
+            copy = s.Remove(i, 1);
+            if (Remove_check(copy))
             {
-                copy = s.Remove(i, 1);
-
-                if (Remove_check(copy))
-                {
-                    Debug.Print(copy);
-                    return "remove one";
-                }
-                else
-                {
-
-                }
-
-
-
+             Debug.Print(copy);
+             return "remove one";
             }
+            else{}
+          }
 
             Debug.Print(copy);
             return "not possible";
@@ -71,11 +53,8 @@ namespace Palindrom
 
         public static bool Remove_check(string s)
         {
-         
-
             for (int i = 0; i < s.Length / 2; i++)
             {
-
                 if (s[i] == s[s.Length - (i + 1)])
                 {
                     //good news
@@ -84,11 +63,8 @@ namespace Palindrom
                 {
                     //bad news
                     return false;
-                 
                 }
-
             }
-
             Debug.Print("remove one");
             return true;
         }
