@@ -32,7 +32,6 @@ namespace IP_Adress
 
                 foreach (string ch in selected_Arr)
                 {
-
                     var result = "";
                     long number = Convert.ToInt64(ch);
                     string b = "";
@@ -58,14 +57,12 @@ namespace IP_Adress
                    Console.Write(result);
                 }
                    Console.WriteLine();
-             
             }
             
             long searched_Number = Convert.ToInt64(Result_second, 2) - Convert.ToInt64(Result_first, 2);
 
             Console.WriteLine(searched_Number);
             Console.ReadKey();
-
 
             return searched_Number;
        
