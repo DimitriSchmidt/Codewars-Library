@@ -27,21 +27,24 @@ namespace IP_Adress
 
             while (count < 2)
             {
-                count++;
-                if (count == 1) { selected_Arr = first;}else{selected_Arr = second;}
-
+              count++;
+                
+                if (count == 1)
+                { selected_Arr = first;}
+                else
+                {selected_Arr = second;}
+                
                 foreach (string ch in selected_Arr)
                 {
                     var result = "";
                     long number = Convert.ToInt64(ch);
                     string b = "";
-
+                    
                     while (number > 0)
                     {
                         b = (number % 2) + b;
                         number = number / 2;
                         result = b;
-
                     }
                      if (result.Length < 8)
                         for (int i = result.Length; i < 8; i++)
@@ -49,20 +52,20 @@ namespace IP_Adress
                             result = "0" + result;
                         }
                
-                   if(count==1){ 
-                   Result_first = Result_first+result; 
-                   }else
+                   if(count==1)
+                   {Result_first = Result_first+result;}
+                    else
                    {Result_second = Result_second+ result;}
              
-                   Console.Write(result);
+                   //Console.Write(result);
                 }
-                   Console.WriteLine();
+                   //Console.WriteLine();
             }
             
             long searched_Number = Convert.ToInt64(Result_second, 2) - Convert.ToInt64(Result_first, 2);
 
-            Console.WriteLine(searched_Number);
-            Console.ReadKey();
+            //Console.WriteLine(searched_Number);
+           //Console.ReadKey();
 
             return searched_Number;
        
