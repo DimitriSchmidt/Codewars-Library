@@ -37,24 +37,21 @@ namespace Persistent_Bugger
 
             public static long Persistence(long n)
             {
-                //Convert integer to string & split the number in digits
-                var Convert_number_toString = n.ToString();
-
-                digitsOfNumber = Convert_number_toString.ToCharArray().Select(c => byte.Parse(c.ToString())).ToArray();
-                stack = new Stack(digitsOfNumber);
-
-
+      
+                int num = 0; //wie oft wurde multipliziert
                 int Buffer =1;
                 
-                //wie oft wurde multipliziert
-                int num = 0;
-                int value = 0 ;
-                int digit;
+                
+                //Convert integer to string & split the number in digits
+                var Convert_number_toString = n.ToString();
+                digitsOfNumber = Convert_number_toString.ToCharArray().Select(c => byte.Parse(c.ToString())).ToArray();
+                stack = new Stack(digitsOfNumber);
 
                 while (stack.Count!=1)
                 {
                     while (stack.Count > 1)
-                    {
+                    {  
+                        int value;
                         value = Convert.ToInt32(stack.ToArray()[0]) * Convert.ToInt32(stack.ToArray()[1]);
                         Buffer *= value;
 
