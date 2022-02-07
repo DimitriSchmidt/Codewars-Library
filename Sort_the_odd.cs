@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Linq;
 namespace Sort_the_odd
 {
-    // You will be given an array of numbers (Digits and Nummbers).
+    // You will be given an array of numbers (Digits and Numbers).
     // You have to sort the odd numbers in ascending order while leaving the even numbers at their original positions.
     //             Array with digits Exemaple & sorted Example
     //             true: 1, 3, 2, 8, 5, 4 => 5, 3, 2, 8, 1, 4
