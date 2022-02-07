@@ -45,13 +45,10 @@ namespace Persistent_Bugger
 
 
                 int Buffer =1;
-                //wie oft wurde iterríert
-
+                
+                //wie oft wurde multipliziert
                 int num = 0;
-                int i = 100;
                 int value = 0 ;
-
-
                 int digit;
 
                 while (stack.Count!=1)
@@ -68,14 +65,11 @@ namespace Persistent_Bugger
                         {
                             Buffer *= Convert.ToInt32(stack.ToArray()[0]);
                         }
-
                         Console.WriteLine(Buffer);
-
                     }
-                
+                    
                     num++;
-
-               
+                    
                    stack.Push(Converter(Buffer,num));
                    Buffer = 1;
                 }
@@ -87,14 +81,11 @@ namespace Persistent_Bugger
 
             public static Array Converter (int Buffer,int num)
             {
-
-
               var Convert_number_toString = Buffer.ToString();
               byte[] Array = new byte[] { };
               Array = Convert_number_toString.ToCharArray().Select(c => byte.Parse(c.ToString())).ToArray();
               stack = new Stack(Array);
-
-               return Array;
+              return Array;
             }
            
 
