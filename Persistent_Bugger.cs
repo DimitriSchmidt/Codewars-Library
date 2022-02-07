@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace Persistent_Bugger
 {
-    class Program
+    class Persistent_Bugger
     {
         //Write a function, persistence,-
         //that takes in a positive parameter num and returns its multiplicative persistence,-
