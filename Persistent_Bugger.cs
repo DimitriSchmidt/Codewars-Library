@@ -46,15 +46,16 @@ namespace Persistent_Bugger
                 var Convert_number_toString = n.ToString();
                 digitsOfNumber = Convert_number_toString.ToCharArray().Select(c => byte.Parse(c.ToString())).ToArray();
                 stack = new Stack(digitsOfNumber);
-
+                
+                
+                //Check single digit
                 while (stack.Count!=1)
-                {
+                {    
                     while (stack.Count > 1)
                     {  
                         int value;
                         value = Convert.ToInt32(stack.ToArray()[0]) * Convert.ToInt32(stack.ToArray()[1]);
                         Buffer *= value;
-
                         stack.Pop();
                         stack.Pop();
 
