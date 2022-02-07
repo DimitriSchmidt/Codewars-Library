@@ -22,11 +22,7 @@ namespace Persistent_Bugger
 
         static void Main(string[] args)
         {
-
-
             long n =9999;
-
-    
             Persist.Persistence(n);
         }
 
@@ -40,14 +36,12 @@ namespace Persistent_Bugger
       
                 int num = 0; //wie oft wurde multipliziert
                 int Buffer =1;
-                
-                
+
                 //Convert integer to string & split the number in digits
                 var Convert_number_toString = n.ToString();
                 digitsOfNumber = Convert_number_toString.ToCharArray().Select(c => byte.Parse(c.ToString())).ToArray();
                 stack = new Stack(digitsOfNumber);
-                
-                
+
                 //Check single digit
                 while (stack.Count!=1)
                 {    
